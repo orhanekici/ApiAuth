@@ -1,0 +1,6 @@
+@ApiAuth_HostAddress = http://localhost:5198
+
+GET {{ApiAuth_HostAddress}}/
+Accept: application/json
+
+###

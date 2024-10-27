@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ApiAuth</name>
+    </assembly>
+    <members>
+        <member name="M:ApiAuth.Controllers.FeedbackController.Update(System.Int32,ApiAuth.Models.Feedback)">
+            <summary>
+            Feedback güncellemesi yapar.
+            </summary>
+            <param name="id">Feedback ID'si.</param>
+            <returns>Güncellenen feedback</returns>
+        </member>
+        <member name="T:ApiAuth.Migrations.Initial">
+            <inheritdoc />
+        </member>
+        <member name="M:ApiAuth.Migrations.Initial.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ApiAuth.Migrations.Initial.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ApiAuth.Migrations.Initial.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:ApiAuth.Migrations.AddIdentityAndFeedback">
+            <inheritdoc />
+        </member>
+        <member name="M:ApiAuth.Migrations.AddIdentityAndFeedback.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ApiAuth.Migrations.AddIdentityAndFeedback.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ApiAuth.Migrations.AddIdentityAndFeedback.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
