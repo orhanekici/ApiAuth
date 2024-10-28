@@ -35,5 +35,29 @@
         <member name="M:ApiAuth.Migrations.AddIdentityAndFeedback.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
+        <member name="T:ApiAuth.Migrations.AddUserToFeedback">
+            <inheritdoc />
+        </member>
+        <member name="M:ApiAuth.Migrations.AddUserToFeedback.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ApiAuth.Migrations.AddUserToFeedback.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ApiAuth.Migrations.AddUserToFeedback.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:ApiAuth.Migrations.AddUserToFeedbackUpdate">
+            <inheritdoc />
+        </member>
+        <member name="M:ApiAuth.Migrations.AddUserToFeedbackUpdate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ApiAuth.Migrations.AddUserToFeedbackUpdate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ApiAuth.Migrations.AddUserToFeedbackUpdate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
     </members>
 </doc>

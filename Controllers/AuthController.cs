@@ -36,8 +36,9 @@ public class AuthController : Controller
 
         if (result.Succeeded)
         {
-            await _signInManager.SignInAsync(user, isPersistent: false);
+            await _signInManager.SignInAsync(user, false);
             return Ok("Kullanıcı kaydedildi.");
+            // persistent kalıcı
         }
 
         return BadRequest(result.Errors);
@@ -48,8 +49,11 @@ public class AuthController : Controller
     {
         var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, isPersistent: false, lockoutOnFailure: false);
 
-        if (result.Succeeded) return Ok("Giriş yapıldı.");
-
+        if (result.Succeeded) // süssüz yazımı çirkin - i agree with Miray
+        {
+            return Ok("Giriş yapıldı.");
+        }
+            
         return Unauthorized("Bu kullanıcı bulunamadı.");
     }
 
@@ -57,7 +61,11 @@ public class AuthController : Controller
     public async Task<IActionResult> Logout()
     {
         await _signInManager.SignOutAsync();
-        return Ok("Çıkış yapıldı.");
+        return Ok(new
+        {
+            success = true,
+            msg = "Çıkış yapıldı."
+        });
     }
     
     [Authorize]

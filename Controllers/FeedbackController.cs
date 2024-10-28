@@ -1,5 +1,7 @@
+using System.Security.Claims;
 using ApiAuth.Data;
 using ApiAuth.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -40,4 +42,33 @@ public class FeedbackController : ControllerBase
     {
         return NoContent();
     }
+
+    [Authorize]
+    [HttpPost]
+    public async Task<IActionResult> Create([FromBody] FeedbackModel model)
+    {
+        var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+        // var user = await _userManager.FindByIdAsync(userId);
+
+        // feedback.UserId = userId;
+        // feedback.Updated = DateTime.Now;
+        
+        var feedback = new Feedback
+        {
+            UserId = userId,
+            Title = model.Title,
+            Detail = model.Detail,
+            Updated = DateTime.Now
+        };
+        // normalde Created bilgisini burada eklemek daha doğru çünkü kullanıcı eğer parametre olarak gönderirse
+        // risk olur
+
+        _context.Feedbacks.Add(feedback);
+        await _context.SaveChangesAsync();
+        return Ok(new
+        {
+            feedback.Id
+        });
+    }
+    
 }
